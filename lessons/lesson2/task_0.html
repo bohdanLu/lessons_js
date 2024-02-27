@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 0</title>
+</head>
+<body>
+	<h1>Задача 0</h1>
+	<p>Обчислити значення виразів</p>
+	<ol>
+		<li>S1=a+12+b</li>
+		<li>S2 = √((a + b) / 2a)</li>
+		<li>S3 = √'3(a + b)c</li>
+		<li>S4 = sin(a / -b)</li>
+	</ol>
+	<script>
+		let a = parseInt(prompt('Введіть число a'))
+		let b = parseInt(prompt('Введіть число b'))
+		let c = parseInt(prompt('Введіть число c'))
+
+		let s1 = a + 12 + b
+		let s2 = Math.sqrt((a + b) / (a * 2))
+		let s3 = Math.cbrt((a + b) * c)
+		let s4 = Math.sin(a / (-b))
+
+		document.write(`
+			<ol>
+				<li>Значення першого виразу: ${s1}</li>
+				<li>Значення другого виразу: ${s2}</li>
+				<li>Значення третього виразу: ${s3}</li>
+				<li>Значення четвертого виразу: ${s4}</li>
+			</ol>
+		`)
+	</script>
+</body>
+</html>
