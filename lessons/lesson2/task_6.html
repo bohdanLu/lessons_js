@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Task 6</title>
+</head>
+<body>
+	<h1>Задача 6</h1>
+	<p>З клавіатури вводяться вартість товару та кількість одиниць 3 товарів. Обчислити вартість кожного товару окремо та
+	загальну вартість. Вивести чек (як у супермаркеті) використовуючи елементи розмітки.</p>
+	<script>
+		let firstProductPrice = parseFloat(prompt('Введіть вартість першого товару:'))
+		let firstProductQuantity = parseFloat(prompt('Введіть кількість першого товару:'))
+		let secondProductPrice = parseFloat(prompt('Введіть вартість другого товару:'))
+		let secondProductQuantity = parseFloat(prompt('Введіть кількість другого товару:'))
+		let thirdProductPrice = parseFloat(prompt('Введіть вартість третього товару:'))
+		let thirdProductQuantity = parseFloat(prompt('Введіть кількість третього товару:'))
+
+		let firstProductTotalPrice = firstProductPrice * firstProductQuantity
+		let secondProductTotalPrice = secondProductPrice * secondProductQuantity
+		let thirdProductTotalPrice = thirdProductPrice * thirdProductQuantity
+		let totalReceiptSum = firstProductTotalPrice + secondProductTotalPrice + thirdProductTotalPrice
+
+		document.write(`
+				<table style="border: 1px solid #000;">
+					<th colspan="2">Товарний чек</th>
+					<tr>
+						<th>x${firstProductQuantity}</th>
+						<td>${firstProductPrice}</td>
+					</tr>
+					<tr>
+						<th>Товар 1</th>
+						<td>${firstProductTotalPrice}</td>
+					</tr>
+					<tr>
+						<th>x${secondProductQuantity}</th>
+						<td>${secondProductPrice}</td>
+					</tr>
+					<tr>
+						<th>Товар 2</th>
+						<td>${secondProductTotalPrice}</td>
+					</tr>
+					<tr>
+						<th>x${thirdProductQuantity}</th>
+						<td>${thirdProductPrice}</td>
+					</tr>
+					<tr>
+						<th>Товар 3</th>
+						<td>${thirdProductTotalPrice}</td>
+					</tr>
+					<tr>
+						<th>До сплати:</th>
+						<td>${totalReceiptSum.toFixed(2)}</td>
+					</tr>
+				</table>
+			`)
+	</script>
+</body>
+</html>
+
+
